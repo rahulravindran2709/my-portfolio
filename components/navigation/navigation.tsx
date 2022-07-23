@@ -14,6 +14,10 @@ const links: { name: string; href: string }[] = [
         href: '/employment-history',
     },
     {
+        name: 'Skills',
+        href: '/skills',
+    },
+    {
         name: 'About me',
         href: '/about',
     },

@@ -3,7 +3,17 @@ import Layout from "../components/layout/layout";
 
 const Home: NextPage = () => {
   return (
-    <Layout title={"Hello!"} description={""}>
+    <Layout
+      title={"Hello!"}
+      description={""}
+      coverImage={
+        <img
+          className="object-fill"
+          src="https://source.unsplash.com/RSP8pY7vTxM/640x959"
+          alt="cover image"
+        />
+      }
+    >
       <div className="grow w-full p-4 text-white text-lg">
         <p className="">
           I am a front end developer adept at using modern web frameworks and

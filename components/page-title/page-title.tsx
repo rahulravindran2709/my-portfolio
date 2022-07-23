@@ -8,7 +8,7 @@ interface IProps {
 }
 
 const PageTitle = ({ title, subtitle = '', center = false, icons = true }: IProps): JSX.Element => (
-    <div className="mt-14 lg:mt-32 font-light w-full text-black dark:text-white">
+    <div className="mb-5 lg:mb-5 font-light w-full text-black dark:text-white">
         <h1 className={`text-4xl sm:text-5xl lg:text-6xl mb-2 ${center && 'md:text-center'}`}>
             {title}
         </h1>

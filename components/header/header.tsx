@@ -15,8 +15,8 @@ const Header = (): JSX.Element => (
   >
     <Link href="/">
       <a>
-        <span className="show sm:hide">JW</span>
-        <span className="hide sm:show">Rahul Ravindran</span>
+        <span className="sm:hidden">RR</span>
+        <span className="hidden sm:inline">Rahul Ravindran</span>
       </a>
     </Link>
     <div className="flex flex-row items-center">
