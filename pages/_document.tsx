@@ -4,7 +4,7 @@ import createEmotionServer from "@emotion/server/create-instance";
 import theme from "../theme/theme";
 import createEmotionCache from "../theme/emotion-cache";
 
-export default class MyDocument extends Document {
+export default class MyDocument extends Document<{ emotionStyleTags: any }> {
   render() {
     return (
       <Html lang="en">
@@ -44,6 +44,7 @@ MyDocument.getInitialProps = async (ctx) => {
     originalRenderPage({
       enhanceApp: (App) =>
         function EnhanceApp(props) {
+          //@ts-expect-error
           return <App emotionCache={cache} {...props} />;
         },
     });
