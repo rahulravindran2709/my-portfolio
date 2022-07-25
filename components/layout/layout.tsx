@@ -16,7 +16,7 @@ const imageAnimation: Variants = {
     x: 0,
     y: 0,
     transition: {
-      duration: 2,
+      duration: 1,
     },
   },
   exit: {
@@ -36,15 +36,15 @@ const bodyAnimation: Variants = {
     x: 0,
     y: 0,
     transition: {
-      duration: 3,
-      delay: 1.5,
+      duration: 2,
+      delay: 0.5,
+      delayChildren: 0.5,
     },
   },
   exit: {
     opacity: 0,
-    x: 0,
-    y: -100,
-    zoom: 20,
+    x: "+200%",
+    y: 0,
     transition: {
       duration: 3,
     },

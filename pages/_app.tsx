@@ -8,6 +8,7 @@ import "../styles/globals.css";
 import createEmotionCache from "../theme/emotion-cache";
 import theme from "../theme/theme";
 import { globalStyles } from "../components/shared/styles";
+import { AnimatePresence } from "framer-motion";
 
 // Client-side cache shared for the whole session
 // of the user in the browser.
@@ -35,13 +36,13 @@ function MyApp({
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Header />
-          {/* <AnimatePresence
-          exitBeforeEnter
-          initial={false}
-          onExitComplete={() => window.scrollTo(0, 0)}
-        > */}
-          <Component {...pageProps} />
-          {/* </AnimatePresence> */}
+          <AnimatePresence
+            exitBeforeEnter
+            initial={false}
+            onExitComplete={() => window.scrollTo(0, 0)}
+          >
+            <Component {...pageProps} />
+          </AnimatePresence>
           {/* <Footer /> */}
         </ThemeProvider>
       </CacheProvider>
