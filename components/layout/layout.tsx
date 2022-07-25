@@ -58,7 +58,7 @@ const Layout = ({
   coverImage,
 }: Props): JSX.Element => (
   <div className="flex h-screen overflow-hidden mt-20">
-    <div className="grow w-2/5">
+    <div className="grow w-2/5 hidden sm:block">
       <motion.div
         initial="hidden"
         animate="enter"
@@ -69,7 +69,7 @@ const Layout = ({
         {coverImage}
       </motion.div>
     </div>
-    <div className="w-3/5 h-screen">
+    <div className="w-full sm:w-3/5 h-screen">
       <motion.main
         initial="hidden"
         animate="enter"
