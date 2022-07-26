@@ -30,11 +30,10 @@ const imageAnimation: Variants = {
   },
 };
 const bodyAnimation: Variants = {
-  hidden: { opacity: 0, x: "+200%", y: 0 },
+  hidden: { opacity: 0 },
   enter: {
     opacity: 1,
-    x: 0,
-    y: 0,
+
     transition: {
       duration: 2,
       delay: 0.5,
