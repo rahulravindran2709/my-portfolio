@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import { motion, Variants } from "framer-motion";
 import PageTitle from "../page-title/page-title";
+import { cx } from "@emotion/css";
 
 type Props = {
   children: ReactNode;
@@ -57,7 +58,7 @@ const Layout = ({
   coverImage,
 }: Props): JSX.Element => (
   <div className="flex h-screen overflow-hidden mt-20">
-    <div className="grow w-2/5 hidden sm:block">
+    <div className={cx("grow hidden ", { "w-2/5 sm:block": !!coverImage })}>
       <motion.div
         initial="hidden"
         animate="enter"
@@ -68,7 +69,7 @@ const Layout = ({
         {coverImage}
       </motion.div>
     </div>
-    <div className="w-full sm:w-3/5 h-screen">
+    <div className={cx("w-full  h-screen", { "sm:w-3/5": !!coverImage })}>
       <motion.main
         initial="hidden"
         animate="enter"

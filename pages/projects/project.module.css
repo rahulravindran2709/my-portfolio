@@ -1,0 +1,22 @@
+.project {
+  align-content: start;
+  grid-template-columns: 1fr 20px;
+  grid-template-rows: auto;
+  grid-template-areas: "image image" "title icon" "desc .";
+}
+.project h2 {
+  grid-area: title;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+.project-image {
+  grid-area: "image";
+}
+
+.social {
+  grid-area: icon;
+}
+
+.desc {
+  grid-area: desc;
+}
