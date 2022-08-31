@@ -3,7 +3,7 @@ import Document, { Head, Html, Main, NextScript } from "next/document";
 export default class MyDocument extends Document<{ emotionStyleTags: any }> {
   render() {
     return (
-      <Html lang="en" className="dark">
+      <Html lang="en">
         <Head>
           <meta name="theme-color" />
           <link rel="shortcut icon" href="/static/favicon.ico" />
