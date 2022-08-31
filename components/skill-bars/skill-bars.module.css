@@ -1,7 +1,7 @@
 .bar {
-  box-shadow: /* White glow */ 0 0 5px #fff, 0 0 10px #fff, 0 0 21px #fff,
-    /* Purple glow */ 0 0 42px theme("colors.purple.500"),
-    0 0 82px theme("colors.purple.500"), 0 0 92px theme("colors.purple.500");
+  box-shadow: /* White glow */ 0 0 3px #fff,0 0 6px #fff, 0 0 8px #fff, 0 0 14px #fff,
+    /* Purple glow */ 0 0 20px theme("colors.purple.500"),
+    0 0 24px theme("colors.purple.500");
   border: 1px solid #fff;
   /*0 0 102px theme("colors.purple.500"); 
     /*0 0 151px theme("colors.purple.500");*/

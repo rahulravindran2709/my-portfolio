@@ -2,12 +2,19 @@ import { motion, Variants } from "framer-motion";
 import styles from "./skill-bars.module.css";
 
 const barAnimation: Variants = {
-  hidden: { width: 0 },
-  enter: {
-    width: "100%",
+  hidden: { scaleX: 0 },
+  visible: {
+    scaleX: 1,
     transition: {
-      duration: 2,
-      delay: 2.5,
+      duration: 1.5,
+      delay: 2,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 1,
+      delay: 2.75,
     },
   },
 };
@@ -27,18 +34,11 @@ export const SkillItem = (props: SkillItemProps) => {
       <div style={{ width: `${proficiency * 100}%` }}>
         <motion.div
           initial="hidden"
-          animate="enter"
-          exit={{
-            opacity: 0,
-            width: 0,
-            transition: {
-              duration: 1,
-              delay: 2.75,
-            },
-          }}
+          animate="visible"
+          exit="exit"
           variants={barAnimation}
           className={
-            "h-full w-full bg-gradient-to-l from-purple-400 to-purple-200 rounded-r-lg " +
+            "h-full bg-gradient-to-l from-purple-400 to-purple-200 rounded-r-lg origin-left " +
             styles["bar"]
           }
         >
@@ -63,7 +63,7 @@ export const SkillBars = () => {
           opacity: 1,
           transition: {
             duration: 1,
-            delay: 2.5,
+            delay: 1.5,
           },
         },
         exit: {

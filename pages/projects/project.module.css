@@ -10,9 +10,14 @@
   align-self: center;
 }
 .project-image {
-  grid-area: "image";
+  grid-area: image;
+  transition: box-shadow 150ms ease-in-out, -webkit-box-shadow 150ms ease-in-out;
 }
-
+.project-image:hover {
+  box-shadow: /* White glow */ 0 0 3px #fff, 0 0 6px #fff, 0 0 8px #fff,
+    0 0 14px #fff, /* Purple glow */ 0 0 20px theme("colors.purple.500"),
+    0 0 24px theme("colors.purple.500");
+}
 .social {
   grid-area: icon;
 }
