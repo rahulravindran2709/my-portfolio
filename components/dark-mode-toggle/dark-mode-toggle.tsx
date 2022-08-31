@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useState } from "react";
 
 const isDark = (): boolean =>
   (localStorage && localStorage.theme === "dark") ||
@@ -29,26 +29,21 @@ const DarkModeToggle = (): JSX.Element => {
   const toggleMode = useCallback(() => {
     const newDark = !isDarkMode;
     setDarkMode(newDark);
-
-    localStorage.setItem("theme", newDark ? "dark" : "light");
-    // localStorage.theme = getThemeString(!isDarkMode);
+    localStorage.setItem("theme", getThemeString(newDark));
   }, [isDarkMode]);
   useEffect(() => {
     if (typeof window === "undefined") {
       return;
     }
     const valueInStorage = getLocalStorageValue();
-    console.log(valueInStorage, "Storage value");
     if (valueInStorage !== null) {
       setDarkMode(valueInStorage);
     } else {
       const valueInSystem = getPrefersMedia();
-      console.log(valueInSystem, "Value in system");
-      // localStorage.setItem("theme", valueInSystem ? "dark" : "light");
       setDarkMode(valueInSystem);
     }
   }, []);
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add("dark");
     } else {
