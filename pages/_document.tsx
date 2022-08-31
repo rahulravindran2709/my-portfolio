@@ -1,7 +1,6 @@
 import * as React from "react";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import createEmotionServer from "@emotion/server/create-instance";
-import theme from "../theme/theme";
 import createEmotionCache from "../theme/emotion-cache";
 
 export default class MyDocument extends Document<{ emotionStyleTags: any }> {
@@ -10,7 +9,7 @@ export default class MyDocument extends Document<{ emotionStyleTags: any }> {
       <Html lang="en">
         <Head>
           {/* PWA primary color */}
-          <meta name="theme-color" content={theme.palette.primary.main} />
+          <meta name="theme-color" />
           <link rel="shortcut icon" href="/static/favicon.ico" />
           <link
             rel="stylesheet"
