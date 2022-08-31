@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Layout from "../../components/layout/layout";
 
 interface AboutPageProps {}
@@ -5,8 +6,10 @@ interface AboutPageProps {}
 const AboutPage = (props: AboutPageProps): JSX.Element => (
   <Layout
     title={"About me"}
-    description={"Hey Im a Javascript developer with 14 years of experience"}
-    coverImage={<img src="/LR_09652.JPG" />}
+    description={""}
+    coverImage={
+      <Image width="768" height="1152" src="/LR_09652.JPG" alt="my-cover" />
+    }
   >
     <div className="grow w-full p-4 text-white text-lg">
       <p className="">
@@ -14,7 +17,7 @@ const AboutPage = (props: AboutPageProps): JSX.Element => (
         tooling to build scalable web applications. I have been building
         frontend apps since the <em>dark ages</em> ie, Internet explorer 8 with
         html 4.1 with table layouts. Glad that they buried IE. Yay!
-      </p>{" "}
+      </p>
       <br />
       <p>
         Since then, I&apos;ve worked on JQuery, Angular 1.x, Bootstrap CSS,

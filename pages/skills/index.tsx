@@ -1,11 +1,10 @@
 import Layout from "../../components/layout/layout";
 import { SkillBars } from "../../components/skill-bars/skill-bars";
-import { SKillsSvg } from "../../svgs/skills";
-
+import { SkillsSvg } from "../../svgs/skills";
 
 const SkillPage = () => {
   return (
-    <Layout title="Skills" coverImage={<SKillsSvg />} description={""}>
+    <Layout title="Skills" coverImage={<SkillsSvg />} description={""}>
       <div>
         <SkillBars />
       </div>

@@ -3,6 +3,7 @@ import styles from "./project.module.css";
 import { gql } from "@apollo/client";
 import client from "../../graphql/apollo-client";
 import { GetServerSideProps } from "next";
+import Image from "next/image";
 
 export interface ProjectItem {
   createdAt: string;
@@ -22,10 +23,7 @@ const ProjectItem = (props: ProjectItemProps) => {
   const { repository } = props;
   return (
     <div className={`${styles.project} grid gap-1`}>
-      <a
-        className={`${styles["project-image"]}`}
-        href={repository.homepageUrl}
-      >
+      <a className={`${styles["project-image"]}`} href={repository.homepageUrl}>
         <img
           src="https://lynnandtonic.com/assets/images/web-nestflix.jpg"
           className="border-stone-500 border p-1.5 border-solid"
@@ -39,7 +37,7 @@ const ProjectItem = (props: ProjectItemProps) => {
       </h2>
       <p className={`${styles["desc"]}`}>{repository.description}</p>
       <a className={`${styles["social"]} github dark`} href={repository.url}>
-        <img src="./github-logo.png" alt="github-logo" />
+        <Image width={20} height={20} src="/github-logo.png" alt="github-logo" />
       </a>
     </div>
   );
