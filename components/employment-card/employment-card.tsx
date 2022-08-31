@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 interface ProjectItemProps {
   designation: string;
@@ -20,21 +20,11 @@ export const EmploymentCard = (props: ProjectItemProps) => {
   } = props;
 
   return (
-    <motion.li
-      className="mb-6 ml-6 flex flex-wrap"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 3, duration: 2, delayChildren: 0.25 }}
-    >
+    <>
       <span className="flex transform-gpu -translate-x-9 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
         {icon}
       </span>
-      <motion.div
-        initial={{ rotateY: -180 }}
-        animate={{ rotateY: 0 }}
-        transition={{ duration: 2, delay: 3 }}
-        className={"origin-[-20%_0%]"}
-      >
+      <motion.div className={"origin-[-20%_0%]"}>
         <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white ">
           {designation} - {company}
           {current && (
@@ -50,6 +40,6 @@ export const EmploymentCard = (props: ProjectItemProps) => {
           {description}
         </p>
       </motion.div>
-    </motion.li>
+    </>
   );
 };
