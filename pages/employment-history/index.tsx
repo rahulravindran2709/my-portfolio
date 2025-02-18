@@ -39,7 +39,7 @@ const employmentVariants: Variants = {
 };
 
 const EmploymentHistoryPage = (
-  props: EmploymentHistoryPageProps
+  props: EmploymentHistoryPageProps,
 ): JSX.Element => (
   <Layout
     title={"Employment history"}

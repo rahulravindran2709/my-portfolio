@@ -1,6 +1,6 @@
 export const isActiveLink = (
   href: string,
-  currentPathname: string
+  currentPathname: string,
 ): boolean => {
   if (href === "/") {
     return href === currentPathname;

@@ -1,9 +1,9 @@
-import Link from "../no-scroll-link/no-scroll-link";
+import NavLink from "@/components/no-scroll-link/no-scroll-link";
+import { Link } from "@tanstack/react-router";
+import DarkModeToggle from "@/components/dark-mode-toggle/dark-mode-toggle";
+import Navigation from "@/components/navigation/navigation";
 
-import Navigation from "../navigation/navigation";
-import DarkModeToggle from "../dark-mode-toggle/dark-mode-toggle";
-
-const Header = (): JSX.Element => (
+const Header = () => (
   <header
     className="
         w-full fixed bg-white flex flex-row justify-between items-center
@@ -15,12 +15,12 @@ const Header = (): JSX.Element => (
         dark:text-white
     "
   >
-    <Link href="/">
+    <NavLink href="/">
       <a>
         <span className="sm:hidden">RR</span>
         <span className="hidden sm:inline">Rahul Ravindran</span>
       </a>
-    </Link>
+    </NavLink>
     <div className="flex flex-row items-center">
       <Navigation />
       <DarkModeToggle />

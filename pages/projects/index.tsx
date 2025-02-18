@@ -37,7 +37,12 @@ const ProjectItem = (props: ProjectItemProps) => {
       </h2>
       <p className={`${styles["desc"]}`}>{repository.description}</p>
       <a className={`${styles["social"]} github dark`} href={repository.url}>
-        <Image width={20} height={20} src="/github-logo.png" alt="github-logo" />
+        <Image
+          width={20}
+          height={20}
+          src="/github-logo.png"
+          alt="github-logo"
+        />
       </a>
     </div>
   );

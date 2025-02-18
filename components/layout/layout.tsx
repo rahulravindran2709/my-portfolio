@@ -1,7 +1,7 @@
-import React, { ReactNode } from "react";
+import { cx } from "@/cn";
 import { motion, Variants } from "framer-motion";
+import { ReactNode } from "react";
 import PageTitle from "../page-title/page-title";
-import { cx } from "@emotion/css";
 
 type Props = {
   children: ReactNode;
@@ -51,12 +51,7 @@ const bodyAnimation: Variants = {
   },
 };
 
-const Layout = ({
-  children,
-  title,
-  description,
-  coverImage,
-}: Props): JSX.Element => (
+const Layout = ({ children, title, description, coverImage }: Props) => (
   <div className="flex h-screen overflow-hidden mt-20">
     <div className={cx("grow hidden ", { "w-2/5 sm:block": !!coverImage })}>
       <motion.div
