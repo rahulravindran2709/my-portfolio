@@ -1,5 +1,5 @@
-import Layout from "../../components/layout/layout";
-import { SkillBars } from "../../components/skill-bars/skill-bars";
+import Layout from "../../src/components/layout/layout";
+import { SkillBars } from "../../src/components/skill-bars/skill-bars";
 import { SkillsSvg } from "../../svgs/skills";
 
 const SkillPage = () => {

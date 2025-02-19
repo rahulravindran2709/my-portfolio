@@ -6,8 +6,9 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import "../styles/app.css";
-import Header from "@/components/header/header";
+import appCss from "../styles/app.css?url";
+import Header from "../../components/header/header";
+import { Footer } from "@/components/footer/footer";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -21,6 +22,12 @@ export const Route = createRootRoute({
       },
       {
         title: "Rahul Ravindran",
+      },
+    ],
+    links: [
+      {
+        rel: "stylesheet",
+        href: appCss,
       },
     ],
   }),
@@ -41,9 +48,10 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
       <head>
         <HeadContent />
       </head>
-      <body className="h-screen w-screen dark:bg-stone-800">
+      <body className="h-screen w-screen dark:bg-[oklch(0.15%_0.03_309.76)] dark:text-white">
         <Header />
         {children}
+        <Footer />
         <Scripts />
       </body>
     </html>

@@ -9,11 +9,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 export default defineConfig({
+  tsr: {
+    appDirectory:'./src/app'
+  },
   vite: {
     resolve: {
       alias: {
-        "@/cn": path.resolve(__dirname, "./utils/cn.ts"),
-        "@/components": path.resolve(__dirname, "./components"),
+        "@/cn": path.resolve(__dirname, "./src/utils/cn.ts"),
+        "@/components": path.resolve(__dirname, "./src/components"),
       },
     },
     plugins: [

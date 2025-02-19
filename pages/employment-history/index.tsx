@@ -1,6 +1,6 @@
 import { motion, Variants } from "framer-motion";
-import { EmploymentCard } from "../../components/employment-card/employment-card";
-import Layout from "../../components/layout/layout";
+import { EmploymentCard } from "../../src/components/employment-card/employment-card";
+import Layout from "../../src/components/layout/layout";
 import { Angular } from "../../svgs/angular";
 import { Java } from "../../svgs/java";
 import { ReactIcon } from "../../svgs/react";

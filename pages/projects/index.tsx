@@ -1,4 +1,4 @@
-import Layout from "../../components/layout/layout";
+import Layout from "../../src/components/layout/layout";
 import styles from "./project.module.css";
 import { gql } from "@apollo/client";
 import client from "../../graphql/apollo-client";

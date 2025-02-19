@@ -15,8 +15,8 @@
     "isolatedModules": true,
     "incremental": true,
     "paths": {
-      "@/cn": ["./utils/cn.ts"],
-      "@/components/*": ["./components/*"]
+      "@/cn": ["./src/utils/cn.ts"],
+      "@/components/*": ["./src/components/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

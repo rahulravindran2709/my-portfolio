@@ -2,8 +2,8 @@ import Head from "next/head";
 
 import { AnimatePresence } from "framer-motion";
 import type { AppProps } from "next/app";
-import Header from "../components/header/header";
-import { globalStyles } from "../components/shared/styles";
+import Header from "../src/components/header/header";
+import { globalStyles } from "../src/components/shared/styles";
 import "../styles/globals.css";
 
 interface MyAppProps extends AppProps {}

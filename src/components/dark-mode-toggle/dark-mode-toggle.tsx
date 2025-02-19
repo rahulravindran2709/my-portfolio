@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useCallback, useEffect, useLayoutEffect, useState } from "react";
 
 const isDark = (): boolean =>
@@ -23,7 +23,7 @@ const getPrefersMedia = () => {
 };
 const getThemeString = (isDark: boolean): string => (isDark ? "dark" : "light");
 
-const DarkModeToggle = (): JSX.Element => {
+const DarkModeToggle = () => {
   const [isDarkMode, setDarkMode] = useState(false);
   console.log(isDarkMode);
   const toggleMode = useCallback(() => {
@@ -51,19 +51,17 @@ const DarkModeToggle = (): JSX.Element => {
     }
   }, [isDarkMode]);
   return (
-    <AnimatePresence exitBeforeEnter initial={false}>
-      <motion.button
-        className="text-2xl sm:text-3xl text-yellow-400 dark:text-yellow-300 focus:outline-none"
-        onClick={toggleMode}
-        key={isDarkMode ? "dark-icon" : "light-icon"}
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ y: 20, opacity: 0 }}
-        transition={{ duration: 0.2 }}
-      >
-        {isDarkMode ? "🌙" : "🌤️"}
-      </motion.button>
-    </AnimatePresence>
+    <motion.button
+      className="text-2xl text-yellow-400 focus:outline-none sm:text-3xl dark:text-yellow-300 cursor-pointer"
+      onClick={toggleMode}
+      key={isDarkMode ? "dark-icon" : "light-icon"}
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: 20, opacity: 0 }}
+      transition={{ duration: 0.2 }}
+    >
+      {isDarkMode ? "🌙" : "🌤️"}
+    </motion.button>
   );
 };
 

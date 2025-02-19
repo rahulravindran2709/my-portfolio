@@ -1,4 +1,4 @@
-import { cx } from "@/cn";
+import { cx } from "../../utils/cn";
 import { motion, Variants } from "framer-motion";
 import { ReactNode } from "react";
 import PageTitle from "../page-title/page-title";
