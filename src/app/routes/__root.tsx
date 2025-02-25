@@ -7,7 +7,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import appCss from "../styles/app.css?url";
-import Header from "../../components/header/header";
+import Header from "@/components/header/header";
 import { Footer } from "@/components/footer/footer";
 
 export const Route = createRootRoute({
@@ -48,7 +48,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
       <head>
         <HeadContent />
       </head>
-      <body className="h-screen w-screen dark:bg-[oklch(0.15%_0.03_309.76)] dark:text-white">
+      <body className="h-screen w-full dark:bg-[oklch(0.15%_0.03_309.76)] dark:text-white">
         <Header />
         {children}
         <Footer />

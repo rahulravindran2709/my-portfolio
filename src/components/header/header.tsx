@@ -4,7 +4,7 @@ import { Link } from "@tanstack/react-router";
 
 const Brand = () => {
   return (
-    <ul className="xl:gap-x-35px flex items-center gap-x-[15px]">
+    <ul className="xl:gap-x-[35px] flex items-center gap-x-[15px]">
       <li>
         <Link to="/" className="logo">
           <span className="text-lg">RR</span>
@@ -13,7 +13,7 @@ const Brand = () => {
       <li className="hidden md:block">
         <a
           href="mailto:rahul.ravindran.work@gmail.com"
-          className="text-size-15 text-seondary-color dark:text-white-color font-medium"
+          className="text-base text-seondary-color dark:text-white-color font-medium"
         >
           rahul.ravindran.work@gmail.com
         </a>

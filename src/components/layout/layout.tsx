@@ -1,7 +1,5 @@
-import { cx } from "../../utils/cn";
-import { motion, Variants } from "framer-motion";
+import { Variants } from "framer-motion";
 import { ReactNode } from "react";
-import PageTitle from "../page-title/page-title";
 
 type Props = {
   children: ReactNode;
@@ -52,32 +50,7 @@ const bodyAnimation: Variants = {
 };
 
 const Layout = ({ children, title, description, coverImage }: Props) => (
-  <div className="flex h-screen overflow-hidden mt-20">
-    <div className={cx("grow hidden ", { "w-2/5 sm:block": !!coverImage })}>
-      <motion.div
-        initial="hidden"
-        animate="enter"
-        exit="exit"
-        className="object-fill"
-        variants={imageAnimation}
-      >
-        {coverImage}
-      </motion.div>
-    </div>
-    <div className={cx("w-full  h-screen", { "sm:w-3/5": !!coverImage })}>
-      <motion.main
-        initial="hidden"
-        animate="enter"
-        exit="exit"
-        variants={bodyAnimation}
-        transition={{ type: "linear" }}
-        className="flex flex-col items-start w-full pt-4 px-2 sm:px-4 md:px-16 lg:px-24 xl:px-28 2xl:px-32 h-full"
-      >
-        <PageTitle title={title} center subtitle={description} />
-        <div className="grow w-full">{children}</div>
-      </motion.main>
-    </div>
-  </div>
+  <main className="h-screen overflow-hidden w-full">{children}</main>
 );
 
 export default Layout;

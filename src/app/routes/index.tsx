@@ -3,6 +3,7 @@ import * as fs from "node:fs";
 import { createFileRoute, useRouter } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/start";
 import Layout from "../../components/layout/layout";
+import { HeroSection as Hero } from "@/components/hero-section";
 
 const filePath = "count.txt";
 
@@ -35,8 +36,8 @@ function Home() {
   const state = Route.useLoaderData();
 
   return (
-    <Layout title={"Hello!"} description={""} coverImage={null}>
-      <div>Hello</div>
+    <Layout title={""} description={""} coverImage={null}>
+      {/* <div>Hello</div>
       <button
         type="button"
         onClick={() => {
@@ -46,7 +47,8 @@ function Home() {
         }}
       >
         Add 1 to {state}?
-      </button>
+      </button> */}
+      <Hero />
     </Layout>
   );
 }

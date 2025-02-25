@@ -4,17 +4,54 @@
   --color-primary: var(--color-purple-500); /* Default primary color */
   --color-primary-light: var(--color-violet-400); /* Light shade */
   --color-primary-dark: var(--color-violet-900); /* Dark shade */
-  --gradient-primary: linear-gradient(
+  --gradient-linear-primary: linear-gradient(
     to right,
     var(--color-primary-light) 0%,
     var(--color-primary-dark) 51%,
     var(--color-primary-light) 100%
   );
+  --gradient-circular-primary: linear-gradient(
+    260deg,
+    #8750f7 0%,
+    rgba(115, 67, 210, 0) 100%
+  );
+  /* light linear-gradient(to right, #8750f7 0%, #2a1454 100%)
+  dark linear-gradient(to right, #8750f7 0%, #ffffff 100%) */
+  --gradient-linear-text-primary-light: linear-gradient(
+    to right,
+    var(--color-primary) 0%,
+    var(--color-primary-dark) 100%
+  );
+  --gradient-linear-text-primary-dark: linear-gradient(
+    to right,
+    var(--color-primary) 0%,
+    var(--color-white) 100%
+  );
+
+  --animate-slide-vertical: slideVertical 1s cubic-bezier(0.000, 0.690, 0.055, 1.050) 1;
+  @keyframes slideVertical {
+    from {
+      transform: translateY(-10em);
+    }
+  }
 }
 
 @layer utilities {
   .bg-gradient {
-    background-image: var(--gradient-primary);
+    background-image: var(--gradient-linear-primary);
     background-size: 200%;
+  }
+
+  .bg-circular-gradient {
+    background-image: var(--gradient-circular-primary);
+  }
+
+  .text-linear-gradient {
+    background-image: var(--gradient-linear-text-primary-light);
+  }
+  .animate-slide-vertical {
+    animation: var(--animate-slide-vertical);
+    animation-iteration-count:1;
+    animation-delay: 1000;
   }
 }

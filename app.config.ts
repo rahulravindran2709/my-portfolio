@@ -10,7 +10,7 @@ const __dirname = dirname(__filename);
 
 export default defineConfig({
   tsr: {
-    appDirectory:'./src/app'
+    appDirectory: "./src/app",
   },
   vite: {
     resolve: {

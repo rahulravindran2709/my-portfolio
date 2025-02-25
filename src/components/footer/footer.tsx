@@ -1,36 +1,29 @@
 import { Link } from "@tanstack/react-router";
+import { NavLink } from "@/components/nav-link/nav-link";
 
 export const Footer = () => {
   return (
     <footer>
       <div className="footer-inner bg-seondary-color dark:bg-dark-color">
         <div className="container">
-          <div className="pt-50px md:pt-60px flex flex-col items-center pb-5">
-            <div className="footer-logo w-75px h-75px mb-6">
+          <div className="flex flex-col items-center pt-12 pb-5 md:pt-16">
+            <div className="footer-logo mb-6 h-[75px] w-[75px]">
               <Link to="/">
-                <img src="./assets/img/logo/logo.png" alt="" />
+                <img src="/assets/img/logo/logo.png" alt="" />
               </Link>
             </div>
             <div>
-              <ul className="nav gap-x-35px flex flex-wrap items-center justify-center">
+              <ul className="nav flex flex-wrap items-center justify-center gap-x-8">
                 <li className="nav_item group relative">
-                  <Link
-                    to="/skills"
-                    className="lg:py-25px after:bg-gradient-primary relative z-0 py-2.5 text-base font-medium text-white capitalize after:absolute after:right-0 after:bottom-[10px] after:h-0.5 after:w-0 after:transition-all after:duration-500 group-hover:after:w-full hover:after:left-0 md:py-4 md:after:bottom-[15px] lg:after:bottom-[25px] 2xl:py-7"
-                  >
-                    Skills
-                  </Link>
+                  <NavLink href="/skills" label="Skills" />
                 </li>
               </ul>
             </div>
-            <div className="copyright text-gray-color mt-5 text-sm whitespace-nowrap md:text-base">
+            <div className="copyright text-gray-color mt-5 text-sm whitespace-nowrap md:text-lg">
               © {new Date().getFullYear()} All rights reserved by
-              <a
-                href="index.html"
-                className="text-white-color hover:text-primary-color"
-              >
+              <Link to="/" className="hover:text-primary text-white">
                 Rahul Ravindran
-              </a>
+              </Link>
             </div>
           </div>
         </div>
